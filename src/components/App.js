@@ -3,11 +3,16 @@ import PropTypes from 'prop-types';
 import { Link, IndexLink } from 'react-router';
 
 class App extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = { opacity: 0,  navclass:'navbar-transparent'};
+
+    }
   render() {
     return (
       <div id="navbar-full">
              <div className="container">
-                <nav className="navbar navbar-ct-blue navbar-transparent navbar-fixed-top" role="navigation">
+                <nav className={`navbar navbar-ct-blue navbar-fixed-top ${this.state.navclass}`} role="navigation">
                 
                 <div className="container">
                     <div className="navbar-header">
@@ -46,11 +51,31 @@ class App extends React.Component {
                 <div>Done</div>
             </div>
             <div className="img-src img-src-background"></div>
-            <div className="img-src blur img-src-background-blur"></div>
+            <div className="img-src blur img-src-background-blur" style={{opacity:this.state.opacity}}></div>
         </div>
         {this.props.children}
       </div>
     );
+  }
+
+  componentDidMount(){
+      window.addEventListener('scroll', ()=>{
+            let oVal = window.scrollY /170;
+      this.setState({opacity: oVal});
+
+      if(window.scrollY>260){
+          if(this.state.navclass === 'navbar-transparent'){
+                this.setState({ navclass:''});
+          }
+
+      } else {
+             if(this.state.navclass === ''){
+                this.setState({navclass:'navbar-transparent'});
+          }
+      }
+
+
+      });
   }
 }
 
