@@ -1,10 +1,11 @@
-import { combineReducers } from 'redux';
-import fuelSavings from './fuelSavingsReducer';
-import {routerReducer} from 'react-router-redux';
+// Set up your root reducer here...
+ import { combineReducers } from 'redux';
+ import {routerReducer} from 'react-router-redux';
 
-const rootReducer = combineReducers({
-  fuelSavings,
+
+ const rootReducer = combineReducers({
   routing: routerReducer
 });
 
-export default rootReducer;
+
+ export default rootReducer;
