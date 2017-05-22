@@ -37,7 +37,7 @@ class App extends React.Component {
                     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul className="nav navbar-nav navbar-right">
                             <li><IndexLink to="/">Home</IndexLink></li>
-                            <li><Link to="/">Portfolio</Link></li>
+                            <li><Link to="/portfolio">Portfolio</Link></li>
                             <li><Link className="btn btn-round btn-default" to="/">Contact me</Link></li>
                     </ul>
                     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomePage = () => {
   return (
-      <div>
+ 
     <div className="main">
     <div className="container tim-container">
         <div id="extras">
@@ -37,8 +37,7 @@ const HomePage = () => {
     </div>
 <div className="space-30"></div>
 </div>
-   
-</div>
+
 
   );
 };
