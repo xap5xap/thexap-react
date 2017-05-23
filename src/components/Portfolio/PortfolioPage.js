@@ -1,5 +1,8 @@
 import React, {PropTypes} from 'react';
 import ProjectList from './ProjectList';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as projectActions from '../../actions/projectActions';
 
 class PortfolioPage extends React.Component {
     render(){
@@ -20,4 +23,16 @@ PortfolioPage.propTypes = {
     projects: PropTypes.array.isRequired
 };
 
-export default PortfolioPage;
+function mapStateToProps(state, ownProps) {
+  return {
+    projects: state.projects
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(projectActions, dispatch)
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PortfolioPage);
