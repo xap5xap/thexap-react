@@ -1,19 +1,22 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
 
-const ProjectCard = ({project}) =>{
-return (
-    <div className="col-sm-4">
-                    <div className="thumbnail">
-                        <img src={project.imgUrl} alt={project.name}/>
-                        <p><strong>{project.name}</strong></p>
-                        <p>{project.technology}</p>
-                    </div>
+const ProjectCard = ({ project }) => {
+    return (
+        <div className="col-sm-4">
+            <Link to={`/project/${project.id}`}>
+                <div className="thumbnail">
+                    <img src={project.imgUrl} alt={project.name} />
+                    <p><strong>{project.name}</strong></p>
+                    <p>{project.type}</p>
                 </div>
-);
+            </Link>
+        </div>
+    );
 };
 
 ProjectCard.propTypes = {
- project: PropTypes.object.isRequired
+    project: PropTypes.object.isRequired
 };
 
 export default ProjectCard;

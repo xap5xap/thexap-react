@@ -7,37 +7,42 @@ const projects = [
   {
     id: '1',
     name: 'Photo Inspiration',
-    type: 'mobile',
-    technology: 'Angular2, Ionic2',
-    imgUrl: '/assets/img/paris.jpg'
+    type: 'Mobile app',
+    technology: [ "Angular2", "Ionic2", "Cordova", 'Flickr Api' ],
+    imgUrl: '/assets/img/paris.jpg',
+    visitUrl: 'https://play.google.com/store/apps/details?id=com.thexap.photoinspirationmobile'
   },
   {
     id: '2',
     name: 'Multas de tránsito',
-    type: 'mobile',
-    technology: 'Angular4, Ionic3',
-    imgUrl: '/assets/img/paris.jpg'
+    type: 'Mobile app',
+    technology: [ "Angular2", "Ionic2", "Cordova", 'Node JS' ],
+    imgUrl: '/assets/img/paris.jpg',
+    visitUrl: 'https://play.google.com/store/apps/details?id=com.thexap.multasapp'
   },
   {
     id: '3',
     name: 'thexap.com',
-    type: 'web',
-    technology: 'React JS',
-    imgUrl: '/assets/img/paris.jpg'
+    type: 'Web site',
+    technology: [ "React JS", 'Bootstrap' ],
+    imgUrl: '/assets/img/paris.jpg',
+    visitUrl: 'https://thexap.com/'
   },
   {
     id: '4',
     name: 'UR Money',
-    type: 'web',
-    technology: 'Angular4',
-    imgUrl: '/assets/img/paris.jpg'
+    type: 'Web site',
+    technology: [ "Angular4", "Ionic3", "Firebase", 'Node JS' ],
+    imgUrl: '/assets/img/paris.jpg',
+    visitUrl: 'https://web.ur.technology/r/A9wYEB'
   },
   {
     id: '5',
     name: 'City knots',
-    type: 'web',
-    technology: 'Angular4, Ionic3',
-    imgUrl: '/assets/img/paris.jpg'
+    type: 'Mobile app',
+    technology: [ "Angular4", "Ionic3", "Cordova"],
+    imgUrl: '/assets/img/paris.jpg',
+    visitUrl: 'https://cityknots.com/'
   }
 ];
 
