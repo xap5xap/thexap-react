@@ -39,7 +39,7 @@ class App extends React.Component {
                                     <li><IndexLink to="/">Home</IndexLink></li>
                                     <li><Link to="/portfolio">Portfolio</Link></li>
                                     <li><Link to="/services">Services</Link></li>
-                                    <li><Link className="btn btn-round btn-default" to="/">Contact me</Link></li>
+                                    <li> <a className="btn btn-round btn-default" href="mailto:xap5xap@gmail.com?Subject=Request info" target="_top">Contact me</a></li>
                                 </ul>
                             </div>
                         </div>
