@@ -6,14 +6,8 @@ const HomePage = () => {
     <div className="main">
     <div className="container tim-container">
         <div id="extras">
-            <div className="space"></div>
-            <div className="row">
-                <div className="col-md-7 col-md-offset-0 col-sm-10 col-sm-offset-1">
-                    <div className="text-center">
-                        <img src="assets/img/dulau.jpg" alt="Rounded Image" className="img-rounded img-responsive img-dog"></img>
-                    </div>
-                </div>
-                <div className="col-md-5 col-sm-12">
+            <div className="row">               
+                <div className="col-md-12 col-sm-12">
                                 <h1 className="text-center">About thexap
                                 
                                 <small className="subtitle">Get to know us</small></h1>
