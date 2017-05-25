@@ -48,7 +48,7 @@ const projects = [
 
 class ProjectsApi {
   static getAllProjects() {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         resolve(Object.assign([], projects));
       }, delay);

@@ -13,7 +13,7 @@ class PortfolioPage extends React.Component {
                         <ProjectList projects={projects}/>
                     </div>
                 </div>
-                <div className="space-30"></div>
+                <div className="space-30"/>
             </div>
           );
     }
@@ -23,7 +23,7 @@ PortfolioPage.propTypes = {
     projects: PropTypes.array.isRequired
 };
 
-function mapStateToProps(state, ownProps) {
+function mapStateToProps(state) {
   return {
     projects: state.projects
   };
