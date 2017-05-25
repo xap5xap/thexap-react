@@ -41,16 +41,6 @@ class Header extends React.Component {
                                     <span className="icon-bar" />
                                     <span className="icon-bar" />
                                 </button>
-                                <a href="http://creative-tim.com">
-                                    <div className="logo-container">
-                                        <div className="logo">
-                                            <img src="assets/img/new_logo.png" />
-                                        </div>
-                                        <div className="brand">
-                                            Creative Tim
-                                </div>
-                                    </div>
-                                </a>
                             </div>
 
                             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -66,9 +56,7 @@ class Header extends React.Component {
                 </div>
                 <div className="blurred-container">
                     <div className="motto">
-                        <div>Get</div>
-                        <div className="border no-right-border">Sh</div><div className="border">it</div>
-                        <div>Done</div>
+                        <div>thexap</div>
                     </div>
                     <div className="img-src img-src-background" />
                     <div className="img-src blur img-src-background-blur" style={{ opacity: this.state.opacity }} />
