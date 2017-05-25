@@ -12,6 +12,7 @@ export default (
   <Route path="/" component={App}>
     <IndexRoute component={HomePage} />
     <Route path="portfolio" component={PortfolioPage} />
+    <Route path="project" component={PortfolioPage} />
     <Route path="project/:id" component={ProjectPage} />
     <Route path="services" component={ServicesPage} />
     <Route path="*" component={NotFoundPage}/>

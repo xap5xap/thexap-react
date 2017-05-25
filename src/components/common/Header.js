@@ -5,9 +5,10 @@ import { Link, IndexLink } from 'react-router';
 class Header extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { opacity: 0, navclass: 'navbar-transparent' };
-
+        this.state = { opacity: 0, navclass: 'navbar-transparent', menuCollapsed: true };
+        this.toogleMenu = this.toogleMenu.bind(this);
     }
+
     componentDidMount() {
         window.addEventListener('scroll', () => {
             let oVal = window.scrollY / 170;
@@ -27,6 +28,10 @@ class Header extends React.Component {
 
         });
     }
+    toogleMenu() {
+        this.setState({ menuCollapsed: !this.state.menuCollapsed });
+    }
+
     render() {
         return (
             <div>
@@ -35,7 +40,7 @@ class Header extends React.Component {
 
                         <div className="container">
                             <div className="navbar-header">
-                                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <button type="button" onClick={this.toogleMenu} className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                                     <span className="sr-only">Toggle navigation</span>
                                     <span className="icon-bar" />
                                     <span className="icon-bar" />
@@ -43,11 +48,11 @@ class Header extends React.Component {
                                 </button>
                             </div>
 
-                            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <div className={(this.state.menuCollapsed ? 'collapse' : '') + ' navbar-collapse'} id="bs-example-navbar-collapse-1">
                                 <ul className="nav navbar-nav navbar-right">
-                                    <li><IndexLink to="/">Home</IndexLink></li>
-                                    <li><Link to="/portfolio">Portfolio</Link></li>
-                                    <li><Link to="/services">Services</Link></li>
+                                    <li><IndexLink to="/" onClick={this.toogleMenu} >Home</IndexLink></li>
+                                    <li><Link to="/portfolio" onClick={this.toogleMenu} >Portfolio</Link></li>
+                                    <li><Link to="/services" onClick={this.toogleMenu} >Services</Link></li>
                                     <li> <a className="btn btn-round btn-default" href="mailto:xap5xap@gmail.com?Subject=Request info" target="_top">Contact me</a></li>
                                 </ul>
                             </div>

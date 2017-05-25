@@ -30,6 +30,7 @@
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "3.3.7",
     "object-assign": "4.1.0",
     "react": "15.5.4",
     "react-dom": "15.5.4",
