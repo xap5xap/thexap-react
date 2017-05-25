@@ -327,10 +327,10 @@
 }
 
 .blurred-container .img-src-background{
-    background-image: url('/assets/img/cover_4.jpg')
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/xap5xap-1d8a9.appspot.com/o/thexap-images-public%2Fcover_4.jpg?alt=media&token=18df73b3-8209-4ca9-bd34-ecb846444bbc')
 }
 .blurred-container .img-src-background-blur{
-    background-image: url('/assets/img/cover_4_blur.jpg')
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/xap5xap-1d8a9.appspot.com/o/thexap-images-public%2Fcover_4_blur.jpg?alt=media&token=2fcdd5ae-9b7e-4c0c-b342-146274ae4293')
 }
 .blur{
   opacity:0;
