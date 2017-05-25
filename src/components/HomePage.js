@@ -11,7 +11,7 @@ const HomePage = () => {
                                 <h1 className="text-center">About thexap
                                 
                                 <small className="subtitle">Get to know us</small></h1>
-                                <hr></hr>
+                                <hr/>
                                 <p>
                                 Thexap offers software development services. Specifically web sites, progressive web apps and hybrid mobile apps for iOS and Android.
                                 </p>
@@ -29,7 +29,7 @@ const HomePage = () => {
             </div>
         </div>
     </div>
-<div className="space-30"></div>
+<div className="space-30"/>
 </div>
 
 
