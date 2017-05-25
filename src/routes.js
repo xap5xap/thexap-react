@@ -6,6 +6,7 @@ import HomePage from './components/HomePage';
 import PortfolioPage from './components/Portfolio/PortfolioPage';
 import ProjectPage from './components/Portfolio/ProjectPage';
 import ServicesPage from './components/Services/ServicesPage';
+import NotFoundPage from './components/NotFoundPage';
 
 export default (
   <Route path="/" component={App}>
@@ -13,5 +14,6 @@ export default (
     <Route path="portfolio" component={PortfolioPage} />
     <Route path="project/:id" component={ProjectPage} />
     <Route path="services" component={ServicesPage} />
+    <Route path="*" component={NotFoundPage}/>
   </Route>
 );
