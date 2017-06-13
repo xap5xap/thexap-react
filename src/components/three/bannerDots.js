@@ -68,7 +68,6 @@ class BannerDots {
         // Add the DOM element of the renderer to the 
         // container we created in the HTML
         this.container = document.getElementById('world');
-        // debugger;
         this.container.appendChild(this.renderer.domElement);
 
         // Listen to the screen: if the user resizes it
@@ -129,7 +128,7 @@ class BannerDots {
     }
 
     render() {
-        let time = Date.now() * 0.00005;
+        let time = Date.now() * 0.00006;
 
         this.camera.position.x = (this.mousePos.x - this.camera.position.x) * 0.5;
         this.camera.position.y = (this.mousePos.y - this.camera.position.y) * 0.5;
@@ -137,6 +136,7 @@ class BannerDots {
         this.camera.lookAt(this.scene.position);
 
         let h = (360 * (0.1 + time) % 360) / 360;
+        // this.material.color.setHSL(h, 0.8, 0.3);
         this.material.color.setHSL(h, 0.5, 0.5);
         //render tge scene
         this.renderer.render(this.scene, this.camera);
@@ -145,10 +145,11 @@ class BannerDots {
 
     createSprites() {
         let geometry = new THREE.Geometry();
-        let sprite = new THREE.TextureLoader().load(require('../../assets/textures/sprites/disc.png'));
-        for (let i = 0; i < 10000; i++) {
+        // let sprite = new THREE.TextureLoader().load(require('../../assets/textures/sprites/disc.png'));
+        let sprite = new THREE.TextureLoader().load(require('../../assets/textures/sprites/6.png'));
+        for (let i = 0; i < 5000; i++) {
             var vertex = new THREE.Vector3();
-            vertex.x = 3000 * Math.random() - 1000;
+            vertex.x = 2000 * Math.random() - 1000;
             vertex.y = 2000 * Math.random() - 1000;
             vertex.z = 2000 * Math.random() - 1000;
             geometry.vertices.push(vertex);
@@ -161,7 +162,7 @@ class BannerDots {
             alphaTest: 0.5,
             transparent: true
         });
-        this.material.color.setHSL(1.0, 0.3, 0.7);
+        this.material.color.setHSL(1.0, 0.7, 0.7);
 
         let particles = new THREE.Points(geometry, this.material);
         this.scene.add(particles);
@@ -196,14 +197,8 @@ class BannerDots {
         }
     }
     onDocumentMouseMove(event) {
-        console.log('event.clientX', event.clientX);
-        console.log('event.clientY', event.clientY);
-        console.log('event.clientX - this.WIDTH / 2', event.clientX - this.WIDTH / 2);
-        console.log('event.clientY - this.HEIGHT / 2', event.clientY - this.HEIGHT / 2);
         this.mousePos.x = event.clientX - this.WIDTH / 2;
         this.mousePos.y = event.clientY - this.HEIGHT / 2;
-        // this.mousePos.x = event.clientX;
-        // this.mousePos.y = event.clientY;
     }
 }
 
