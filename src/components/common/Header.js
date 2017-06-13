@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, IndexLink } from 'react-router';
 import BannerDots from '../three/bannerDots';
+import BannerRandom from '../three/bannerRandom';
 
 
 class Header extends React.Component {
@@ -30,7 +31,8 @@ class Header extends React.Component {
         });
 
 
-        let banner = new BannerDots();
+        // let banner = new BannerDots();
+        let banner = new BannerRandom();
         banner.init();
     }
     toogleMenu() {
@@ -58,7 +60,7 @@ class Header extends React.Component {
                                     <li><IndexLink to="/" onClick={this.toogleMenu} >Home</IndexLink></li>
                                     <li><Link to="/portfolio" onClick={this.toogleMenu} >Portfolio</Link></li>
                                     <li><Link to="/services" onClick={this.toogleMenu} >Services</Link></li>
-                                    <li> <a className="btn btn-round btn-default" href="mailto:xavier.perez@thexap.com?Subject=Request info" target="_top">Contact me</a></li>
+                                    <li> <a className="btn btn-round btn-default" href="mailto:support@thexap.com?Subject=Request info" target="_top">Contact me</a></li>
                                 </ul>
                             </div>
                         </div>

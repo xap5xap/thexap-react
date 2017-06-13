@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-class BannerDots {
+class BannerRandom {
     //THREEJS RELATED VARIABLES
     scene;
     camera;
@@ -10,21 +10,18 @@ class BannerDots {
     farPlane;
     HEIGHT;
     WIDTH;
+    HEIGHT_HALF;
+    WIDTH_HALF;
     renderer;
     container;
-
-    //LIGHTS
-    hemisphereLight;
-    shadowLight;
-    ambientLight;
-    material;
-    sea;
-    mesh;
 
     mousePos = {
         x: 0,
         y: 0
     };
+
+    parameters;
+    materials = [];
 
 
 
@@ -36,16 +33,18 @@ class BannerDots {
         // this.HEIGHT = window.innerHeight;
         this.HEIGHT = 540;
         this.WIDTH = window.innerWidth;
+        this.HEIGHT_HALF = this.HEIGHT / 2;
+        this.WIDTH_HALF = this.WIDTH / 2;
 
         // Create the scene
         this.scene = new THREE.Scene();
-        this.scene.fog = new THREE.FogExp2(0x000000, 0.001);
+        this.scene.fog = new THREE.FogExp2(0x000000, 0.0007);
 
         // Create the camera
         this.aspectRatio = this.WIDTH / this.HEIGHT;
-        this.fieldOfView = 55;
-        this.nearPlane = 2;
-        this.farPlane = 2000;
+        this.fieldOfView = 75;
+        this.nearPlane = 1;
+        this.farPlane = 3000;
         this.camera = new THREE.PerspectiveCamera(
             this.fieldOfView,
             this.aspectRatio,
@@ -92,16 +91,26 @@ class BannerDots {
     }
 
     render() {
-        let time = Date.now() * 0.00006;
+        let time = Date.now() * 0.00005;
 
-        this.camera.position.x += (this.mousePos.x - this.camera.position.x) * 0.5;
-        this.camera.position.y += (this.mousePos.y - this.camera.position.y) * 0.5;
+        // this.camera.position.x += (this.mousePos.x - this.camera.position.x) * 0.05;
+        // this.camera.position.y += (-this.mousePos.y - this.camera.position.y) * 0.05;
 
         this.camera.lookAt(this.scene.position);
 
-        let h = (360 * (0.1 + time) % 360) / 360;
-        // this.material.color.setHSL(h, 0.8, 0.3);
-        this.material.color.setHSL(h, 0.5, 0.5);
+
+        for (let i = 0; i < this.scene.children.length; i++) {
+            const object = this.scene.children[i];
+            if (object instanceof THREE.Points) {
+                object.rotation.y = time * (i < 4 ? i + 1 : - (i + 1));
+            }
+        }
+        for (let i = 0; i < this.materials.length; i++) {
+            let color = this.parameters[i][0];
+            const h = (360 * (color[0] + time) % 360) / 360;
+            this.materials[i].color.setHSL(h, color[1], color[2]);
+        }
+
         //render tge scene
         this.renderer.render(this.scene, this.camera);
 
@@ -109,27 +118,33 @@ class BannerDots {
 
     createSprites() {
         let geometry = new THREE.Geometry();
-        // let sprite = new THREE.TextureLoader().load(require('../../assets/textures/sprites/disc.png'));
-        let sprite = new THREE.TextureLoader().load(require('../../assets/textures/sprites/6.png'));
-        for (let i = 0; i < 5000; i++) {
+        for (let i = 0; i < 20000; i++) {
             const vertex = new THREE.Vector3();
             vertex.x = 2000 * Math.random() - 1000;
             vertex.y = 2000 * Math.random() - 1000;
             vertex.z = 2000 * Math.random() - 1000;
             geometry.vertices.push(vertex);
         }
+        this.parameters = [
+            [[1, 1, 0.5], 5],
+            [[0.95, 1, 0.5], 4],
+            [[0.90, 1, 0.5], 3],
+            [[0.85, 1, 0.5], 2],
+            [[0.80, 1, 0.5], 1]
+        ];
 
-        this.material = new THREE.PointsMaterial({
-            size: 35,
-            sizeAttenuation: false,
-            map: sprite,
-            alphaTest: 0.5,
-            transparent: true
-        });
-        this.material.color.setHSL(1.0, 0.7, 0.7);
+        let particles;
+        for (let i = 0; i < this.parameters.length; i++) {
+            // this.color = this.parameters[i][0];
+            let size = this.parameters[i][1];
+            this.materials[i] = new THREE.PointsMaterial({ size: size });
+            particles = new THREE.Points(geometry, this.materials[i]);
+            particles.rotation.x = Math.random() * 6;
+            particles.rotation.y = Math.random() * 6;
+            particles.rotation.z = Math.random() * 6;
+            this.scene.add(particles);
+        }
 
-        let particles = new THREE.Points(geometry, this.material);
-        this.scene.add(particles);
     }
 
     init() {
@@ -147,21 +162,21 @@ class BannerDots {
     onDocumentTouchStart(event) {
         if (event.touches.length == 1) {
             event.preventDefault();
-            this.mousePos.x = event.touches[0].pageX - this.WIDTH / 2;
-            this.mousePos.y = event.touches[0].pageY - this.HEIGHT / 2;
+            this.mousePos.x = event.touches[0].pageX - this.WIDTH_HALF;
+            this.mousePos.y = event.touches[0].pageY - this.HEIGHT_HALF;
         }
     }
     onDocumentTouchMove(event) {
         if (event.touches.length == 1) {
             event.preventDefault();
-            this.mousePos.x = event.touches[0].pageX - this.WIDTH / 2;
-            this.mousePos.y = event.touches[0].pageY - this.HEIGHT / 2;
+            this.mousePos.x = event.touches[0].pageX - this.WIDTH_HALF;
+            this.mousePos.y = event.touches[0].pageY - this.HEIGHT_HALF;
         }
     }
     onDocumentMouseMove(event) {
-        this.mousePos.x = event.clientX - this.WIDTH / 2;
-        this.mousePos.y = event.clientY - this.HEIGHT / 2;
+        this.mousePos.x = event.clientX - this.WIDTH_HALF;
+        this.mousePos.y = event.clientY - this.HEIGHT_HALF;
     }
 }
 
-export default BannerDots;
+export default BannerRandom;
