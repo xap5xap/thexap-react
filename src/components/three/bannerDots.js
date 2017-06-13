@@ -126,7 +126,7 @@ class BannerDots {
             alphaTest: 0.5,
             transparent: true
         });
-        this.material.color.setHSL(1.0, 0.7, 0.7);
+        this.material.color.setHSL(1.0, 0.4, 0.7);
 
         let particles = new THREE.Points(geometry, this.material);
         this.scene.add(particles);

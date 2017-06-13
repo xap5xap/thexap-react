@@ -93,8 +93,8 @@ class BannerRandom {
     render() {
         let time = Date.now() * 0.00005;
 
-        // this.camera.position.x += (this.mousePos.x - this.camera.position.x) * 0.05;
-        // this.camera.position.y += (-this.mousePos.y - this.camera.position.y) * 0.05;
+        this.camera.position.x += (this.mousePos.x - this.camera.position.x) * 0.05;
+        this.camera.position.y += (-this.mousePos.y - this.camera.position.y) * 0.05;
 
         this.camera.lookAt(this.scene.position);
 
@@ -118,26 +118,36 @@ class BannerRandom {
 
     createSprites() {
         let geometry = new THREE.Geometry();
-        for (let i = 0; i < 20000; i++) {
+        let sprite = new THREE.TextureLoader().load(require('../../assets/textures/sprites/spark1.png'));
+        // let sprite = new THREE.TextureLoader().load(require('../../assets/textures/sprites/6.png'));
+        for (let i = 0; i < 5000; i++) {
             const vertex = new THREE.Vector3();
             vertex.x = 2000 * Math.random() - 1000;
-            vertex.y = 2000 * Math.random() - 1000;
-            vertex.z = 2000 * Math.random() - 1000;
+            vertex.y = 2000 * Math.random() - 1500;
+            vertex.z = 2000 * Math.random() - 100;
             geometry.vertices.push(vertex);
         }
+
         this.parameters = [
-            [[1, 1, 0.5], 5],
-            [[0.95, 1, 0.5], 4],
-            [[0.90, 1, 0.5], 3],
-            [[0.85, 1, 0.5], 2],
-            [[0.80, 1, 0.5], 1]
+            [[1, 1, 0.5], 27],
+            [[0.95, 1, 0.5], 25],
+            [[0.90, 1, 0.5], 20],
+            [[0.85, 1, 0.5], 15],
+            [[0.80, 1, 0.5], 10]
         ];
 
         let particles;
         for (let i = 0; i < this.parameters.length; i++) {
             // this.color = this.parameters[i][0];
             let size = this.parameters[i][1];
-            this.materials[i] = new THREE.PointsMaterial({ size: size });
+            // this.materials[i] = new THREE.PointsMaterial({ size: size });
+            this.materials[i] = new THREE.PointsMaterial({
+                size: size,
+                sizeAttenuation: false,
+                map: sprite,
+                alphaTest: 0.5,
+                transparent: true
+            });
             particles = new THREE.Points(geometry, this.materials[i]);
             particles.rotation.x = Math.random() * 6;
             particles.rotation.y = Math.random() * 6;
