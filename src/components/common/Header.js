@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, IndexLink } from 'react-router';
+import BannerDots from '../three/bannerDots';
 
 
 class Header extends React.Component {
@@ -27,6 +28,10 @@ class Header extends React.Component {
 
 
         });
+
+
+        let banner = new BannerDots();
+        banner.init();
     }
     toogleMenu() {
         this.setState({ menuCollapsed: !this.state.menuCollapsed });
@@ -53,7 +58,7 @@ class Header extends React.Component {
                                     <li><IndexLink to="/" onClick={this.toogleMenu} >Home</IndexLink></li>
                                     <li><Link to="/portfolio" onClick={this.toogleMenu} >Portfolio</Link></li>
                                     <li><Link to="/services" onClick={this.toogleMenu} >Services</Link></li>
-                                    <li> <a className="btn btn-round btn-default" href="mailto:xap5xap@gmail.com?Subject=Request info" target="_top">Contact me</a></li>
+                                    <li> <a className="btn btn-round btn-default" href="mailto:xavier.perez@thexap.com?Subject=Request info" target="_top">Contact me</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -63,9 +68,10 @@ class Header extends React.Component {
                     <div className="motto">
                         <div>thexap</div>
                     </div>
-                    <div className="img-src img-src-background" />
-                    <div className="img-src blur img-src-background-blur" style={{ opacity: this.state.opacity }} />
+                    <div id="world" className="img-src img-src-background" />
+                    <div className="img-srcs blurs img-src-background-blurs" style={{ opacity: this.state.opacity }} />
                 </div>
+
             </div>
         );
 

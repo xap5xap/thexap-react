@@ -38,7 +38,8 @@
     "react-router": "3.0.5",
     "react-router-redux": "4.0.8",
     "redux": "3.6.0",
-    "redux-thunk": "2.1.0"
+    "redux-thunk": "2.1.0",
+    "three": "0.85.2"
   },
   "devDependencies": {
     "autoprefixer": "6.5.4",
@@ -47,6 +48,7 @@
     "babel-eslint": "7.1.1",
     "babel-jest": "18.0.0",
     "babel-loader": "6.2.10",
+    "babel-plugin-transform-class-properties": "6.24.1",
     "babel-plugin-transform-react-constant-elements": "6.9.1",
     "babel-plugin-transform-react-remove-prop-types": "0.2.11",
     "babel-polyfill": "6.20.0",
@@ -122,6 +124,9 @@
         "presets": [
           "env",
           "react-hmre"
+        ],
+        "plugins": [
+          "transform-class-properties"
         ]
       },
       "production": {
