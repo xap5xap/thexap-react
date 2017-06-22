@@ -8,21 +8,21 @@ const HomePage = () => {
         <div id="extras">
             <div className="row">               
                 <div className="col-md-12 col-sm-12">
-                                <h1 className="text-center">About thexap
+                                <h1 className="text-center">Acerca de thexap
                                 
-                                <small className="subtitle">Get to know us</small></h1>
+                                <small className="subtitle">Conócenos</small></h1>
                                 <hr/>
                                 <p>
-                                Thexap offers software development services. Specifically web sites, progressive web apps and hybrid mobile apps for iOS and Android.
+                                Thexap ofrece servicios de desarrollo de software. Específicamente sitios web, aplicaciones web progresivas y aplicaciones móviles para iOS y Android.
                                 </p>
                                 <p>
-                                   We use the latests technologies for our projects such as ReactJS, Angular2, Angular4, Ionic2, Ionic3 to deliver the best quality in the shortest time.
+                                   Utilizamos las últimas tecnologías para nuestros proyectos como para ofrecer la mejor calidad en el menor tiempo posible.
                                 </p>
                                 <p>
-                                We are committed to create beautiful easy-to-use applications based on your requirements. We are constantly innovating and learning new technologies to be able to advise and help you grow.
+                                Estamos comprometidos a crear hermosas aplicaciones fáciles de usar basadas en sus requerimientos. Estamos constantemente innovando y aprendiendo nuevas tecnologías para poder asesorar y ayudarle a crecer.
                                 </p>
                                 <p>
-                                    Feel free to contacts us, we’ll be happy to help you!
+                                Siéntase libre de ponerse en contacto con nosotros, estaremos encantados de ayudarle!
                                 </p>
 
                 </div>

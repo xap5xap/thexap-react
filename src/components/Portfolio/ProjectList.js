@@ -4,8 +4,8 @@ import ProjectCard from './ProjectCard';
 const ProjectList = ({ projects }) => {
     return (
         <div className="container-fluid text-center bg-grey">
-            <h1 className="text-center">Portfolio
-               <small className="subtitle">What we have created</small>
+            <h1 className="text-center">Portafolio
+               <small className="subtitle">Lo que hemos creado</small>
             </h1>
             <hr />
             {projects.map(project =>
