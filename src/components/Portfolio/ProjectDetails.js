@@ -2,26 +2,23 @@ import React, { PropTypes } from 'react';
 
 const ProjectDetails = ({ project }) => {
     return (
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col-sm-12 col-xs-12">
-                    <div className="panel panel-default text-center">
-                        <div className="panel-heading">
-                            <h1>{project.name}</h1>
-                        </div>
-                        <div className="panel-body">
-                            <p><strong>Technology used in this {project.type}</strong></p>
-                            {
-                                project.technology.map(technology =>
-                                    <p key={technology}>{technology}</p>
-                                )
-                            }
-                        </div>
-                        <div className="panel-footer">
-                            <a target="_blank" href={project.visitUrl}>Visit site</a>
-                        </div>
-                    </div>
-                </div>
+        <div className="main">
+            <div className="container-fluid bg-3 text-center">
+                <h1 className="text-center">{project.name}
+                    <small className="subtitle">{project.type}</small>
+                </h1>
+                <hr />
+                <img src={project.imgUrl} alt={project.name} className="img-thumbnail" />
+
+                <div className="descripcion-proyecto" dangerouslySetInnerHTML={{ __html: project.description }}/>
+
+                {project.downloadGoogle ? <div className="descripcion-proyecto" dangerouslySetInnerHTML={{ __html: project.downloadGoogle }}/> : <a target="_blank" href={project.visitUrl} className="btn btn-lg btn-fill btn-warning">Visita el sitio</a>}
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
             </div>
         </div>
     );
