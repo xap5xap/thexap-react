@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, IndexLink } from 'react-router';
-import BannerDots from '../three/bannerDots';
 import BannerRandom from '../three/bannerRandom';
 
 
