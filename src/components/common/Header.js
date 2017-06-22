@@ -42,7 +42,7 @@ class Header extends React.Component {
         return (
             <div>
                 <div className="container">
-                    <nav className={`navbar navbar-ct-blue navbar-fixed-top ${this.state.navclass}`} role="navigation">
+                    <nav className={`navbar navbar-ct-orange navbar-fixed-top ${this.state.navclass}`} role="navigation">
 
                         <div className="container">
                             <div className="navbar-header">
@@ -67,7 +67,7 @@ class Header extends React.Component {
                 </div>
                 <div className="blurred-container">
                     <div className="motto">
-                        <div>thexap</div>
+                        <div><img style={{}} src={require('../../assets/img/Logo2_white_300_2.png')} /></div>
                     </div>
                     <div id="world" className="img-src img-src-background" />
                     <div className="img-srcs blurs img-src-background-blurs" style={{ opacity: this.state.opacity }} />

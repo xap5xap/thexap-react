@@ -81,7 +81,7 @@ h1 .subtitle {
   color: #05AE0E !important; }
 
 .text-warning, .text-warning:hover {
-  color: #FF9500 !important; }
+  color: #f59415 !important; }
 
 .text-danger, .text-danger:hover {
   color: #FF3B30 !important; }
@@ -161,7 +161,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .ct-orange.radio.checked .second-icon,
 .ct-orange.checkbox.checked,
 .ct-orange.radio.checked {
-  color: #FF9500; }
+  color: #f59415; }
 
 .ct-red,
 .ct-red.checkbox.checked .second-icon,
@@ -184,7 +184,7 @@ input.ct-green + span + label + span.switch-right {
 
 input.ct-orange + span.switch-left,
 input.ct-orange + span + label + span.switch-right {
-  background-color: #FF9500; }
+  background-color: #f59415; }
 
 input.ct-red + span.switch-left,
 input.ct-red + span + label + span.switch-right {
@@ -297,18 +297,18 @@ input.ct-red + span + label + span.switch-right {
     border-top-color: #2CA8FF; }
 
 .btn-warning {
-  border-color: #FF9500;
-  color: #FF9500; }
+  border-color: #f59415;
+  color: #f59415; }
   .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .btn-warning:active:focus, .btn-warning:active:hover, .btn-warning.active:focus, .btn-warning.active:hover, .open > .btn-warning.dropdown-toggle, .open > .btn-warning.dropdown-toggle:focus, .open > .btn-warning.dropdown-toggle:hover {
     background-color: transparent;
     color: #ED8D00;
     border-color: #ED8D00; }
   .btn-warning.disabled, .btn-warning.disabled:hover, .btn-warning.disabled:focus, .btn-warning.disabled.focus, .btn-warning.disabled:active, .btn-warning.disabled.active, .btn-warning:disabled, .btn-warning:disabled:hover, .btn-warning:disabled:focus, .btn-warning:disabled.focus, .btn-warning:disabled:active, .btn-warning:disabled.active, .btn-warning[disabled], .btn-warning[disabled]:hover, .btn-warning[disabled]:focus, .btn-warning[disabled].focus, .btn-warning[disabled]:active, .btn-warning[disabled].active, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-warning:hover, fieldset[disabled] .btn-warning:focus, fieldset[disabled] .btn-warning.focus, fieldset[disabled] .btn-warning:active, fieldset[disabled] .btn-warning.active {
     background-color: transparent;
-    border-color: #FF9500; }
+    border-color: #f59415; }
   .btn-warning.btn-fill {
     color: #FFFFFF;
-    background-color: #FF9500;
+    background-color: #f59415;
     opacity: 1;
     filter: alpha(opacity=100); }
     .btn-warning.btn-fill:hover, .btn-warning.btn-fill:focus, .btn-warning.btn-fill:active, .btn-warning.btn-fill.active, .open > .btn-warning.btn-fill.dropdown-toggle {
@@ -317,7 +317,7 @@ input.ct-red + span + label + span.switch-right {
     .btn-warning.btn-fill .caret {
       border-top-color: #FFFFFF; }
   .btn-warning .caret {
-    border-top-color: #FF9500; }
+    border-top-color: #f59415; }
 
 .btn-danger {
   border-color: #FF3B30;
@@ -658,7 +658,7 @@ input.ct-red + span + label + span.switch-right {
   background-color: #05AE0E; }
 
 .slider-warning .ui-widget-header {
-  background-color: #FF9500; }
+  background-color: #f59415; }
 
 .slider-danger .ui-widget-header {
   background-color: #FF3B30; }
@@ -824,8 +824,8 @@ input.ct-red + span + label + span.switch-right {
   color: #05AE0E; }
 
 .label-warning {
-  border-color: #FF9500;
-  color: #FF9500; }
+  border-color: #f59415;
+  color: #f59415; }
 
 .label-danger {
   border-color: #FF3B30;
@@ -844,7 +844,7 @@ input.ct-red + span + label + span.switch-right {
   background-color: #05AE0E; }
 
 .label-warning.label-fill, .progress-bar-warning {
-  background-color: #FF9500; }
+  background-color: #f59415; }
 
 .label-danger.label-fill, .progress-bar-danger {
   background-color: #FF3B30; }
@@ -1393,7 +1393,7 @@ input.ct-red + span + label + span.switch-right {
   background-color: rgba(76, 217, 100, 0.98); }
 
 .navbar-ct-orange {
-  background-color: rgba(255, 149, 0, 0.98); }
+  background-color: rgba(245, 148, 21, 0.98); }
 
 .navbar-ct-red {
   background-color: rgba(255, 76, 64, 0.98); }
@@ -1524,7 +1524,7 @@ input.ct-red + span + label + span.switch-right {
 .pagination.ct-orange > li.active > span:hover,
 .pagination.ct-orange > li.active > a:focus,
 .pagination.ct-orange > li.active > span:focus {
-  background-color: #FF9500; }
+  background-color: #f59415; }
 
 .nav-pills.ct-red > li.active > a,
 .nav-pills.ct-red > li.active > a:hover,
@@ -1550,8 +1550,8 @@ input.ct-red + span + label + span.switch-right {
   color: #05AE0E; }
 
 .nav-pills.ct-orange > li > a {
-  border: 1px solid #FF9500;
-  color: #FF9500; }
+  border: 1px solid #f59415;
+  color: #f59415; }
 
 .nav-pills.ct-red > li > a {
   border: 1px solid #FF3B30;

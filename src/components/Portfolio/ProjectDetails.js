@@ -13,6 +13,12 @@ const ProjectDetails = ({ project }) => {
                 <div className="descripcion-proyecto" dangerouslySetInnerHTML={{ __html: project.description }}/>
 
                 {project.downloadGoogle ? <div className="descripcion-proyecto" dangerouslySetInnerHTML={{ __html: project.downloadGoogle }}/> : <a target="_blank" href={project.visitUrl} className="btn btn-lg btn-fill btn-warning">Visita el sitio</a>}
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
             </div>
         </div>
     );
