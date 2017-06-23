@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import ProjectDetails from './ProjectDetails';
+import GoogleAnalyticsService from '../GoogleAnalyticsService';
 
 class ProjectPage extends React.Component {
     constructor(props, context) {
@@ -12,8 +13,17 @@ class ProjectPage extends React.Component {
 
     }
 
+    componentDidMount() {
+        GoogleAnalyticsService.emitCurrentPage('ProjectPage');
+        if (this.state.project.id && this.state.project.id.length > 0) {
+            GoogleAnalyticsService.emitEvent('ProjectPage', `Project: ${this.state.project.name}`, 'componentDidMount()');
+        }
+    }
+
+
     componentWillReceiveProps(nextProps) {
         if (this.props.project.id !== nextProps.project.id) {
+            GoogleAnalyticsService.emitEvent('ProjectPage', `Project: ${this.state.project.name}`, 'componentWillReceiveProps()');
             this.setState({ project: Object.assign({}, nextProps.project) });
         }
     }

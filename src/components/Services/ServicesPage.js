@@ -1,6 +1,12 @@
 import React from 'react';
+import GoogleAnalyticsService from '../GoogleAnalyticsService';
 
 class ServicesPage extends React.Component {
+
+    componentDidMount() {
+        GoogleAnalyticsService.emitCurrentPage('ServicesPage');
+    }
+
     render() {
         return (
             <div className="main">
@@ -23,7 +29,7 @@ class ServicesPage extends React.Component {
                         <div className="col-sm-4">
                             <h2>Tecnologías</h2>
                             <p>Utilizamos las últimas tecnologías para crear sitios web y aplicaciones móviles. Utilizamos las mismas tecnologías que Gooogle y Facebook usan en sus proyectos.</p>
-                            <img src={require('../../assets/img/tools.svg')}  alt="Image" width="150" height="100" />
+                            <img src={require('../../assets/img/tools.svg')} alt="Image" width="150" height="100" />
                         </div>
                     </div>
                 </div>
