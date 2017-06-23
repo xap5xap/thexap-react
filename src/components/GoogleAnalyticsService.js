@@ -1,7 +1,7 @@
 
 class GoogleAnalyticsService {
    emitEvent(eventCategory, eventAction, eventLabel = '', eventValue = null) {
-    ga('send', 'event', {
+    window.ga('send', 'event', {
       eventCategory: eventCategory,
       eventLabel: `${eventLabel}`,
       eventAction: `${eventCategory} - ${eventAction}`,
@@ -10,8 +10,8 @@ class GoogleAnalyticsService {
   }
 
    emitCurrentPage(pageName) {
-    ga('set', 'page', `/${pageName}`);
-    ga('send', 'pageview');
+    window.ga('set', 'page', `/${pageName}`);
+    window.ga('send', 'pageview');
   }
 
 }
