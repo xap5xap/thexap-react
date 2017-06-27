@@ -59,7 +59,7 @@ class Header extends React.Component {
                                     <li><IndexLink to="/" onClick={this.toogleMenu} >Home</IndexLink></li>
                                     <li><Link to="/portfolio" onClick={this.toogleMenu} >Portafolio</Link></li>
                                     <li><Link to="/services" onClick={this.toogleMenu} >Servicios</Link></li>
-                                    <li> <a className="btn btn-round btn-default" href="mailto:support@thexap.com?Subject=Request info" target="_top">Contáctenos</a></li>
+                                    <li> <a className="btn btn-round btn-default" href="mailto:xavier.perez@thexap.com?Subject=Request info" target="_top">Contáctenos</a></li>
                                 </ul>
                             </div>
                         </div>
