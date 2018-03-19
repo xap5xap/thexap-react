@@ -8,11 +8,11 @@ const ProjectDetails = ({ project }) => {
                     <small className="subtitle">{project.type}</small>
                 </h1>
                 <hr />
-                <img src={project.imgUrl} alt={project.name} className="img-thumbnail" />
+                <img src={project.imgUrl} alt={project.name} style={{maxHeight: 310}} className="img-thumbnail" />
 
                 <div className="descripcion-proyecto" dangerouslySetInnerHTML={{ __html: project.description }}/>
 
-                {project.downloadGoogle ? <div className="descripcion-proyecto" dangerouslySetInnerHTML={{ __html: project.downloadGoogle }}/> : <a target="_blank" href={project.visitUrl} className="btn btn-lg btn-fill btn-warning">Visita el sitio</a>}
+          {project.downloadGoogle ? <div className="descripcion-proyecto" dangerouslySetInnerHTML={{ __html: project.downloadGoogle }} /> : <a target="_blank" href={project.visitUrl} className="btn btn-lg btn-fill btn-warning">Check it out</a>}
                 <br/>
                 <br/>
                 <br/>

@@ -28,7 +28,7 @@ class BannerRandom {
 
     createScene() {
         // Get the width and the height of the screen,
-        // use them to set up the aspect ratio of the camera 
+        // use them to set up the aspect ratio of the camera
         // and the size of the renderer.
         // this.HEIGHT = window.innerHeight;
         this.HEIGHT = 540;
@@ -64,7 +64,7 @@ class BannerRandom {
         this.renderer.setSize(this.WIDTH, this.HEIGHT);
 
 
-        // Add the DOM element of the renderer to the 
+        // Add the DOM element of the renderer to the
         // container we created in the HTML
         this.container = document.getElementById('world');
         this.container.appendChild(this.renderer.domElement);
@@ -106,9 +106,10 @@ class BannerRandom {
             }
         }
         for (let i = 0; i < this.materials.length; i++) {
-            let color = this.parameters[i][0];
-            const h = (360 * (color[0] + time) % 360) / 360;
-            this.materials[i].color.setHSL(h, color[1], color[2]);
+            // let color = this.parameters[i][0];
+            // const h = (360 * (color[0] + time) % 360) / 360;
+            // this.materials[i].color.setHSL(h, color[1], color[2]);
+          this.materials[i].color.setHex(0xF59415);
         }
 
         //render tge scene
