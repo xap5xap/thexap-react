@@ -20,9 +20,8 @@ const projects = [
     type: 'Mobile app',
     technology: ["React", "React Native", 'Golang'],
     imgUrl: 'https://firebasestorage.googleapis.com/v0/b/xap5xap-1d8a9.appspot.com/o/thexap-images-public%2Fmultas.jpg?alt=media&token=9ab08165-62cd-440f-a3a6-2c2de6535ca8',
-    visitUrl: 'https://play.google.com/store/apps/details?id=com.thexap.multasapp',
+    visitUrl: 'https://multasecuador.com/',
     description: 'The best app that shows the points available in the drivers license and the citations for traffic infractions of the national transit agency Ecuador ANT',
-    downloadGoogle: "<a target='_blank' href='https://play.google.com/store/apps/details?id=com.thexap.multasapp&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img width='350' alt='Disponible en Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/es-419_badge_web_generic.png'/></a>"
   },
   {
     id: '3',
