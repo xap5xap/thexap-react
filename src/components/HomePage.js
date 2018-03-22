@@ -17,7 +17,7 @@ class HomePage extends React.Component {
                 <h1 className="text-center">About me</h1>
                 <hr />
                 <p className="text-center">
-                  I am a Full stack developer</p>
+                  I am a Full stack freelance developer</p>
                 <p className="text-center">
                   Go, Node, Javascript, React, React native</p>
               </div>

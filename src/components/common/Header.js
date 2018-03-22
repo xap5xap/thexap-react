@@ -58,6 +58,7 @@ class Header extends React.Component {
                                 <ul className="nav navbar-nav navbar-right">
                                     <li><IndexLink to="/" onClick={this.toogleMenu} >Home</IndexLink></li>
                                     <li><Link to="/portfolio" onClick={this.toogleMenu} >Portfolio</Link></li>
+                                    <li><a href="https://medium.com/@xap5xap">Blog</a></li>
                                     {/* <li><Link to="/services" onClick={this.toogleMenu} >Servicios</Link></li> */}
                                     {/* <li> <a className="btn btn-round btn-default" href="mailto:hello@thexap.com?Subject=Request info" target="_top">Contáctenos</a></li> */}
                                 </ul>
