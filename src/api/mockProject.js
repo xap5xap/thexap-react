@@ -58,6 +58,15 @@ const projects = [
     imgUrl: 'https://kowala.tech/img/social/rectangular-text.png',
     visitUrl: 'https://kowala.tech/',
     description: 'Cryptocurrency'
+  },
+  {
+    id: '7',
+    name: 'Doctors office',
+    type: 'Web app',
+    technology: ["ReactJS", "WebGL"],
+    imgUrl: 'https://drjavierperez.com/static/media/doctormain.4477cb3b.jpg',
+    visitUrl: 'https://drjavierperez.com/',
+    description: 'Landing page'
   }
 ];
 
