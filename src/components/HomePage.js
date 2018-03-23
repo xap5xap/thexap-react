@@ -14,12 +14,14 @@ class HomePage extends React.Component {
           <div id="extras">
             <div className="row">
               <div className="col-md-12 col-sm-12">
-                <h1 className="text-center">About me</h1>
+                <h1 className="text-center">About me
+                  <small className="subtitle">Xavier Pérez</small>
+                </h1>
                 <hr />
                 <p className="text-center">
-                  I am a Full stack freelance developer</p>
+                  I am a freelance Full Stack developer</p>
                 <p className="text-center">
-                  Go, Node, Javascript, React, React native</p>
+                  Go, NodeJS, Javascript, React, React native, WebVR</p>
               </div>
             </div>
           </div>
