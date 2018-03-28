@@ -55,7 +55,7 @@ const projects = [
     name: 'Kowala',
     type: 'Mobile and web app',
     technology: ["ReactJS", "React native"],
-    imgUrl: 'https://kowala.tech/img/social/rectangular-text.png',
+    imgUrl: 'https://firebasestorage.googleapis.com/v0/b/xap5xap-1d8a9.appspot.com/o/thexap-images-public%2FKowala.jpg?alt=media&token=10467c67-be57-483a-aa13-4198b3880120',
     visitUrl: 'https://kowala.tech/',
     description: 'Cryptocurrency'
   },
