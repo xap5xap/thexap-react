@@ -58,8 +58,8 @@ class Header extends React.Component {
                                 <ul className="nav navbar-nav navbar-right">
                                     <li><IndexLink to="/" onClick={this.toogleMenu} >Home</IndexLink></li>
                                     <li><Link to="/portfolio" onClick={this.toogleMenu} >Portfolio</Link></li>
-                                    <li><a href="https://medium.com/@thexap">Blog</a></li>
-                                
+                                    <li><a href="https://medium.com/@thexap/latest">Blog</a></li>
+
                                 </ul>
                             </div>
                         </div>
